@@ -13,7 +13,7 @@ io = new io.Server(server)
 
 //listen for connections
 io.sockets.on("connection", (socket)=> {
-    console.log("We have a new client", socket.id);
+    console.log("New client, Yay!", socket.id);
 
 //".on" getting "data", "emit" to all C
 socket.on("data", (data) => {
@@ -24,7 +24,7 @@ socket.on("data", (data) => {
 
     //listen for when socket disconnects
 socket.on("disconnect", () => {
-    console.log("Client disconnected : ", socket.id)
+    console.log("disconnect : ", socket.id)
     })
 })
 

@@ -13,17 +13,19 @@ function setup() {
   
   function mouseDragged() {
    
-    circle(mouseX, mouseY, 50);
-    let data = {
+    circle(mouseX, mouseY, 20);
+    let dataObj = {
         x : mouseX,
-        y : mouseY
+        y : mouseY,
     }
     socket.emit("data", dataObj);
   
 }
 
+socket.on("dataFromServer", (dataObj) => {
+    drawPainting(dataObj);
+})
 
-//on getting data from server, draw the painting.
 function drawPainting(dataObj) {
-    circle(dataObj.X, dataObj.y, 20);
-}
+    circle(dataObj.x, dataObj.y, 20);
+  }

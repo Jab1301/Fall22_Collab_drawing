@@ -1,3 +1,14 @@
 body{
-    background-color: bisque;
+    background-image: url(https://nypost.com/wp-content/uploads/sites/2/2022/04/farm-highland-cow-03.jpg?quality=75&strip=all);
 }
+
+h1 {
+    background-color: brown;
+    margin: 1rem 0;
+    padding: 1rem;
+    text-align: center;
+}
+p{
+    background-color: lightgray;
+    width: 250%;
+ }
