@@ -31,6 +31,7 @@ socket.on("disconnect", () => {
 
 
 //run the app on port 8000
+let port = process.env.PORT || 8000;
 server.listen("8000", () => {
     console.log("server on port 8000");
 })
